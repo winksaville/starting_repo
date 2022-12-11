@@ -1,0 +1,11 @@
+.section .text.starting_repo::add,"ax",@progbits
+	.globl	starting_repo::add
+	.p2align	4, 0x90
+	.type	starting_repo::add,@function
+starting_repo::add:
+
+	.cfi_startproc
+	lea rax, [rdi + rsi]
+	ret
+
+	.size	starting_repo::add, .Lfunc_end0-starting_repo::add
