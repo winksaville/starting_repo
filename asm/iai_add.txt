@@ -10,9 +10,12 @@ iai::iai_wrappers::iai_add:
 	mov edi, 2
 	mov esi, 2
 	call qword ptr [rip + starting_repo::add@GOTPCREL]
-	mov qword ptr [rsp], rax
 
-	mov rax, qword ptr [rsp]
+	mov qword ptr [rsp], rax
+	mov rax, rsp
+
+	#APP
+	#NO_APP
 
 	pop rax
 	.cfi_def_cfa_offset 8

@@ -1,5 +1,6 @@
-use criterion::{black_box, criterion_group, criterion_main, Criterion};
+use criterion::{criterion_group, criterion_main, Criterion};
 use starting_repo::add;
+use std::hint::black_box;
 
 #[allow(unused)]
 fn crit_add(c: &mut Criterion) {
